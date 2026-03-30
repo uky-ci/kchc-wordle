@@ -1,0 +1,14 @@
+services:
+  wordle:
+    image: ghcr.io/uky-ci/kchc-wordle:1.0.0-dev
+    build: .
+    ports:
+      - 8011:80
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1280

@@ -58,14 +58,15 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </p>
 
       <p className="mt-6 text-sm italic text-gray-500 dark:text-gray-300">
-        This is an open source version of the word guessing game we all know and
-        love -{' '}
+        This game is based on the work of @cwackerfuss and @modem7 on GitHub
+        <br/>
         <a
-          href="https://github.com/cwackerfuss/react-wordle"
+          href="https://github.com/uky-ci/kchc-wordle"
           className="font-bold underline"
+          target="blank"
         >
-          check out the code here
-        </a>{' '}
+          View the source code and license
+        </a>
       </p>
     </BaseModal>
   )
