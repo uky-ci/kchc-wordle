@@ -1,5 +1,6 @@
 services:
   wordle:
+    image: ghcr.io/uky-ci/kchc-wordle:1.0.0-dev
     build: .
     ports:
       - 8011:80
