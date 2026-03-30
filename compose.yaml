@@ -1,10 +1,8 @@
 services:
   wordle:
-    build:
-      dockerfile: docker/Dockerfile
-      context: .
+    build: .
     ports:
-      - 8080:8080
+      - 8011:80
     networks:
       - internal
 
