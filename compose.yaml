@@ -1,0 +1,15 @@
+services:
+  wordle:
+    build:
+      dockerfile: docker/Dockerfile
+      context: .
+    ports:
+      - 8080:8080
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1280

@@ -15,13 +15,8 @@ trace_on() { set -x;}
 trace_off() { set +x;}
 
 add_custom_user_group() {
-    addgroup -g $GID -S $GROUP
-    adduser -S -D -H \
-        -u $UID \
-        -G $GROUP \
-        -s /sbin/nologin \
-        -h /var/cache/nginx \
-        $USER
+    groupadd --gid $GID $GROUP
+    useradd --uid $UID --gid $GID --home-dir /var/cache/nginx $USER
 }
 
 add_user_permission() {
